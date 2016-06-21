@@ -1686,8 +1686,7 @@ Allows generic cash payments to be created between multiple accounts
 
 + Response 200 (application/json)
     + Attributes 
-        + Data
-            + CashDocRef: abc123 (string)
+        + Data (CashDocRefResponse)
         + Response (200 CreateResponse)
 
 + Response 400 (application/json)
@@ -2525,6 +2524,8 @@ The Transaction key is a five part key made up of the following values seperate 
 + DepartmentCode: BRL (required, string)
 + AmountInDocumentCurrency: `-4615.68` (required, number)
 
+## CashDocRefResponse (object)
++ CashDocRef: abc123456 (string)
 
 ## Charter (object)
 + CharterId: CHART01.000 (required, string)
