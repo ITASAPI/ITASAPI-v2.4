@@ -1621,7 +1621,7 @@ Data Objects and endpoints providing access to cash create, match and authorisat
 
 ## AuthoriseForPosting [/Finance/{TradingEntityId}/Cash/AuthoriseForPosting/{DocumentReference}]
 Authorise an entity to be added to the Posting process.
-### Create AuthoriseForPosting [PUT]
+### AuthoriseForPosting [PUT]
 `New` in release 2.4
 
 <strong>URI Parameters</strong>
@@ -1687,7 +1687,7 @@ Allows generic cash payments to be created between multiple accounts
 + Response 200 (application/json)
     + Attributes 
         + Data
-            + DocumentReference: abc123 (string)
+            + CashDocRef: abc123 (string)
         + Response (200 CreateResponse)
 
 + Response 400 (application/json)
@@ -1722,7 +1722,7 @@ Allows cash payments to be created on account of existing (posted) accounting do
 + Response 200 (application/json)
     + Attributes 
         + Data
-            + DocumentReference: abc123 (string)
+            + CashDocRef: abc123 (string)
         + Response (200 CreateResponse)
 
 + Response 400 (application/json)
@@ -1755,7 +1755,7 @@ Allows generic cash receipts to be created between multiple accounts
 + Response 200 (application/json)
     + Attributes 
         + Data
-            + DocumentReference: abc123 (string)
+            + CashDocRef: abc123 (string)
         + Response (200 CreateResponse)
 
 + Response 400 (application/json)
@@ -1791,7 +1791,7 @@ Allows cash receipts to be created on account of existing (posted) accounting do
 + Response 200 (application/json)
     + Attributes 
         + Data
-            + DocumentReference: abc123 (string)
+            + CashDocRef: abc123 (string)
         + Response (200 CreateResponse)
 
 + Response 400 (application/json)
