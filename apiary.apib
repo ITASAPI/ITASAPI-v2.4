@@ -1269,6 +1269,9 @@ Provides access to full accounting ledger by Document Reference.
 |PromptMonth|txx_delp|`number`||||
 |OptionType|txx_extype|`string`|1|||
 |CommodityReference|txx_component|`string`|15|||
+|TransactionIsMatched|txx_matchflg|`string`|3|||
+|PreMatchDocumentReference|txx_prematch|`string`|9|||
+
 
 + Request
     [AccessToken][]
@@ -2952,6 +2955,8 @@ The Transaction key is a five part key made up of the following values seperate 
 + PromptMonth: 10 (number)
 + OptionType: C (string)
 + CommodityReference: 1bc123 (string)
++ TransactionIsMatched: abc (string)
++ PreMatchDocumentReference: CP1503236 (string)
 
 ## Sample (object)
 + SampleId: 123abc (string)
@@ -3111,6 +3116,7 @@ The Transaction key is a five part key made up of the following values seperate 
 + PromptMonth: 5 (number)
 + OptionType: C (string)
 + CommodityReference: reference info (string)
+
 
 
 ## UserAccount (object)
