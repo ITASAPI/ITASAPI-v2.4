@@ -70,7 +70,7 @@ Client Ledger Account profile.
     [AccessToken][]
     
 + Parameters
-    + TradingEntityId (required, string, `AB`) ... identify specific trading entity
+    + TradingEntityId (required, string, `JT`) ... identify specific trading entity
     + Property (optional, enum[string]) ... identify property name to filter by 
        + Members
             + Status
@@ -80,7 +80,7 @@ Client Ledger Account profile.
             + CanBeShipper
             + CanBeDerivativeClient 
             + CanBeDerivativeBroker 
-            + EDICode: extABCDEF
+            + EDICode
     + PropertyValue (optional, string, `O`) ... required if property specified
 
 + Response 200 (application/json; charset=utf-8)
@@ -88,12 +88,22 @@ Client Ledger Account profile.
         + Data (array [ClientAccount List])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
-    
+
++ Request
+    [AccessToken][]
+
++ Parameters
+    + TradingEntityId (required, string, `XX`) 
+    + ClientAccountId (required, string, `P10000.000) 
+
++ Response 404 (application/json; charset=utf-8)
+    + Attributes (404 Response)    
+
+
 + Response 400 (application/json; charset=utf-8)
     + Attributes (400 BadPropertyResponse)
     
-+ Response 404 (application/json; charset=utf-8)
-    + Attributes (404 Response)
+
 
 ## ClientAccount [/ReferenceData/{TradingEntityId}/ClientLedger/ClientAccount/{ClientAccountId}]
 Client Ledger Account profile.
@@ -135,13 +145,20 @@ Client Ledger Account profile.
     [AccessToken][]
     
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
-    + ClientAccountId (required, string, `ABCDEF.P`) 
+    + TradingEntityId (required, string, `JT`) 
+    + ClientAccountId (required, string, `NEWACC42.P`) 
 
 + Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (ClientAccount)
         + Response (200 SuccessResponse)
+
++ Request
+    [AccessToken][]
+    
++ Parameters
+    + TradingEntityId (required, string, `XX`) - incorrect TEID produces 404
+    + ClientAccountId (required, string, `NEWACC42.P`) 
     
 + Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
@@ -236,7 +253,7 @@ User-defined list of codes used for classification purposes on Client Account pr
     [AccessToken][]
     
 + Parameters
-    + TradingEntityId (required, string, `AB`) ... identify specific trading entity
+    + TradingEntityId (required, string, `JT`) ... identify specific trading entity
     + Property (optional, enum[string]) ... identify property name to filter by 
        + Members
             + ClientTypeId
@@ -375,7 +392,7 @@ Codes used to segregate business sectors within a trading company, and can be ap
     [AccessToken][]
     
 + Parameters
-    + TradingEntityId (required, string, `AB`) ... identify specific trading entity
+    + TradingEntityId (required, string, `JT`) ... identify specific trading entity
     + Property (optional, enum[string]) ... identify property name to filter by 
        + Members
             + DepartmentId
@@ -412,7 +429,7 @@ Codes used to segregate business sectors within a trading company, and can be ap
     [AccessToken][]
 
 + Parameters
-    + TradingEntityId (required, string, `AB`) ...  specific trading entity
+    + TradingEntityId (required, string, `JT`) ...  specific trading entity
     + DepartmentId (required, string, `5100`) ...  property department id 
 
 + Response 200 (application/json; charset=utf-8)
@@ -444,7 +461,7 @@ Codes that are primarily used for accounting transaction analysis purposes.
     [AccessToken][]
 
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
+    + TradingEntityId (required, string, `JT`) 
     + Property (optional, enum[string])  
        + Members
             + ExpenseId
@@ -482,7 +499,7 @@ Nominal (General) Ledger Account profile.
     [AccessToken][]
 
 + Parameters
-    + TradingEntityId (required, string, `AB`) ... identify specific trading entity
+    + TradingEntityId (required, string, `JT`) ... identify specific trading entity
     + Property (optional, enum[string]) ... identify property name to filter by 
        + Members
             + NominalAccountId
@@ -519,7 +536,7 @@ Nominal (General) Ledger Account profile.
     [AccessToken][]
 
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
+    + TradingEntityId (required, string, `JT`) 
     + NominalAccountId (required, string, `1234.5678`) 
 
 
@@ -576,7 +593,7 @@ User-defined categorisation codes that can be applied to departments and bank ac
     [AccessToken][]
 
 + Parameters
-    + TradingEntityId (required, string, `AB`) ... identify specific trading entity
+    + TradingEntityId (required, string, `JT`) ... identify specific trading entity
     + Property (optional, enum[string]) ... identify property name to filter by 
        + Members
             + NominalCategoryId
@@ -611,7 +628,7 @@ Codes and rates applied as part of any VAT/GST accounting practise.
     [AccessToken][]
 
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
+    + TradingEntityId (required, string, `JT`) 
     + Property (optional, enum[string]) 
        + Members
             + VATRateId
@@ -1005,7 +1022,7 @@ Charter profile – restricted by WIPAccountType of `C`.
     [AccessToken][]
     
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
+    + TradingEntityId (required, string, `JT`) 
     + CharterId (required, string, `CHART01.000`)
 
 + Response 200 (application/json; charset=utf-8)
@@ -1091,7 +1108,7 @@ Stock Account profile - restricted by WIPAccountType of `S`.
     [AccessToken][]
     
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
+    + TradingEntityId (required, string, `JT`) 
     + StockUnitId (required, string, `5100.MEP`)
 
 + Response 200 (application/json; charset=utf-8)
@@ -1173,7 +1190,7 @@ Charter profile
     [AccessToken][]
     
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
+    + TradingEntityId (required, string, `JT`) 
     + WipAccountId (required, string, `5100.MEP`)
 
 + Response 200 (application/json; charset=utf-8)
@@ -1348,7 +1365,7 @@ Provides access to financial transaction details yet to be posted to the ledgers
     [AccessToken][]
     
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
+    + TradingEntityId (required, string, `JT`) 
     + DocumentReference (required, string, `CN1600001`)
 
 + Response 200 (application/json; charset=utf-8)
@@ -1386,7 +1403,7 @@ Document summary information including properties specific to integration requir
     + Attributes (TransactionHeader)
     
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
+    + TradingEntityId (required, string, `JT`) 
     + DocumentReference (required, string, `CN1600001`)
 
 + Response 201 (application/json; charset=utf-8)
@@ -1471,7 +1488,7 @@ Principle Physical Contract (agreement) details
     [AccessToken][]
     
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
+    + TradingEntityId (required, string, `JT`) 
     + ContractId (required, string, `P40000.000`)
 
 + Response 200 (application/json; charset=utf-8)
@@ -1555,7 +1572,7 @@ Broker commissions held against Physical Contracts.
     [AccessToken][]
     
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
+    + TradingEntityId (required, string, `JT`) 
     + ContractId (required, string, `P40000.000`)
 
 + Response 200 (application/json; charset=utf-8)
@@ -1659,7 +1676,7 @@ Authorise an entity to be added to the Posting process.
 None.
 
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
+    + TradingEntityId (required, string, `JT`) 
     + DocumentReference (required, string, `abc123`)
 
 + Request (application/json; charset=utf-8)
@@ -1698,7 +1715,7 @@ Allows generic cash payments to be created between multiple accounts
 |AccountDetails||[array] of `object`||see <a href="/#reference/data-object-definitions/accountpostingdetails/accountpostingdetails">Account Posting Details</a> object|`required`|
 
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
+    + TradingEntityId (required, string, `JT`) 
 
 + Request (application/json; charset=utf-8)
     + Header
@@ -1732,7 +1749,7 @@ Allows cash payments to be created on account of existing (posted) accounting do
 
 
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
+    + TradingEntityId (required, string, `JT`) 
 
 + Request (application/json; charset=utf-8)
     + Header
@@ -1764,7 +1781,7 @@ Allows generic cash receipts to be created between multiple accounts
 |AccountDetails||[array] of `object`||see <a href="/#reference/data-object-definitions/accountpostingdetails/accountpostingdetails">Account Posting Details</a> object|`required`|
 
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
+    + TradingEntityId (required, string, `JT`) 
 
 + Request (application/json; charset=utf-8)
     + Header
@@ -1799,7 +1816,7 @@ Allows cash receipts to be created on account of existing (posted) accounting do
 
 
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
+    + TradingEntityId (required, string, `JT`) 
 
 + Request (application/json; charset=utf-8)
     + Header
@@ -1841,7 +1858,7 @@ Orders (CallOffs) specifically representing incoming goods.
     [AccessToken][]
     
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
+    + TradingEntityId (required, string, `JT`) 
     + ReleaseId (required, number, `123`)
 
 + Response 200 (application/json; charset=utf-8)
@@ -1871,7 +1888,7 @@ Orders (CallOffs) specifically representing outgoing goods.
     [AccessToken][]
     
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
+    + TradingEntityId (required, string, `JT`) 
     + ReleaseId (required, number, `123`)
 
 + Response 200 (application/json; charset=utf-8)
@@ -1925,7 +1942,7 @@ Orders (CallOffs) generated through EXPED
     [AccessToken][]
     
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
+    + TradingEntityId (required, string, `JT`) 
     + ReleaseId (required, string, `abc123`)
 
 + Response 200 (application/json; charset=utf-8)
@@ -1976,7 +1993,7 @@ Orders (CallOffs) generated through EXPED
     [AccessToken][]
     
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
+    + TradingEntityId (required, string, `JT`) 
     + Property (optional, enum[string]) ... identify property name to filter by 
        + Members
             + ReleaseId 
@@ -2014,7 +2031,7 @@ Orders specifically representing movements of goods between Stock Units (aka Man
 
 
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
+    + TradingEntityId (required, string, `JT`) 
     + ReleaseId (required, number, `123`)
 
 + Request (application/json; charset=utf-8)
@@ -2055,7 +2072,7 @@ Batch record information by Stock Unit.
     [AccessToken][]
     
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
+    + TradingEntityId (required, string, `JT`) 
     + StockBatchId (required, string, `abc123`)
 
 + Response 200 (application/json; charset=utf-8)
@@ -2085,7 +2102,7 @@ Batch record information by Stock Unit.
     [AccessToken][]
     
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
+    + TradingEntityId (required, string, `JT`) 
     + Property (optional, enum[string]) ... identify property name to filter by 
        + Members
             + StockBatchId 
@@ -2135,7 +2152,7 @@ None.
             }
 
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
+    + TradingEntityId (required, string, `JT`) 
     + ReleaseId (required, number, `123`)
 
 + Response 201 (application/json; charset=utf-8)
@@ -2164,7 +2181,7 @@ Information specific to the source of the goods generated during any movement (D
     [AccessToken][]
 
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
+    + TradingEntityId (required, string, `JT`) 
     + ReleaseId (required, number, `123`)
 
 + Response 200 (application/json; charset=utf-8)
@@ -2187,7 +2204,7 @@ Information specific to the source of the goods generated during any movement (D
 |Weight|phys10_qty|`number`||required||
 
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
+    + TradingEntityId (required, string, `JT`) 
     + ReleaseId (required, number, `123`)
 
 + Request (application/json; charset=utf-8)
@@ -2240,7 +2257,7 @@ Information relating to the processing of the Order.
 |SecondWeightId|phys09_secondweightid|`string`|10|||
 
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
+    + TradingEntityId (required, string, `JT`) 
     + ReleaseId (required, number, `123`)
 
 + Request (application/json; charset=utf-8)
@@ -2287,7 +2304,7 @@ Information relating to the processing of the Order.
 
 
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
+    + TradingEntityId (required, string, `JT`) 
     + ReleaseId (required, number, `123`)
 
 + Request (application/json; charset=utf-8)
