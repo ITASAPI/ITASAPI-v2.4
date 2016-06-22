@@ -1277,8 +1277,8 @@ Provides access to full accounting ledger by Document Reference.
     [AccessToken][]
     
 + Parameters
-    + TradingEntityId (required, string, `AB`) 
-    + DocumentReference (required, string, `P10000.000`)
+    + TradingEntityId (required, string, `JT`) 
+    + DocumentReference (required, string, `CP1500020`)
 
 + Response 200 (application/json; charset=utf-8)
     + Attributes 
@@ -1286,8 +1286,22 @@ Provides access to full accounting ledger by Document Reference.
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
 
++ Request
+    [AccessToken][]
+    
++ Parameters
+    + TradingEntityId (required, string, `JT`) 
+    + DocumentReference (required, string, ``)
+
 + Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
+
++ Request
+    [AccessToken][]
+    
++ Parameters
+    + TradingEntityId (required, string, `JT`) 
+    + DocumentReference (required, string, `CP1500047`)
 
 + Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
