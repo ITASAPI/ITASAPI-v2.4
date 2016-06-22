@@ -1291,20 +1291,23 @@ Provides access to full accounting ledger by Document Reference.
     
 + Parameters
     + TradingEntityId (required, string, `JT`) 
-    + DocumentReference (required, string, ``)
+    + DocumentReference (required, string, `CP1500047`)
 
-+ Response 400 (application/json; charset=utf-8)
-    + Attributes (400 Response)
++ Response 404 (application/json; charset=utf-8)
+    + Attributes (404 Response)
+
 
 + Request
     [AccessToken][]
     
 + Parameters
     + TradingEntityId (required, string, `JT`) 
-    + DocumentReference (required, string, `CP1500047`)
+    + DocumentReference (required, string, ``)
 
-+ Response 404 (application/json; charset=utf-8)
-    + Attributes (404 Response)
++ Response 400 (application/json; charset=utf-8)
+    + Attributes (400 Response)
+
+
 
 
 ## UnPosted Transaction [/Accounting/{TradingEntityId}/Transaction/UnPostedTransaction/{DocumentReference}]
