@@ -82,16 +82,16 @@ Client Ledger Account profile
             + EDICode: extABCDEF
     + PropertyValue (optional, string, `O`) ... required if property specified
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes (object)
         + Data (array [ClientAccount List])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
     
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 BadPropertyResponse)
     
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## ClientAccount [/ReferenceData/{TradingEntityId}/ClientLedger/ClientAccount/{ClientAccountId}]
@@ -137,12 +137,12 @@ Client Ledger Account profile.
     + TradingEntityId (required, string, `AB`) 
     + ClientAccountId (required, string, `ABCDEF.P`) 
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (ClientAccount)
         + Response (200 SuccessResponse)
     
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 
@@ -191,7 +191,7 @@ For Update requests the field `ClientAccountId` is used to check the correspondi
 |FamilyCommitmentLimit|chr31_fwdlimit|`number`|0|||
 
 
-+ Request (application/json)
++ Request (application/json; charset=utf-8)
     + Header
 
             AccessToken:Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1bmlxdWVfbmFtZSI6ImRlZXBhayIsInN1YiI6ImRlZXBhayIsInJvbGUiOlsiNzk5YjhhNDEtYWI0ZS00MTBhLWI5MTktYzU3ZWFlMmFlMDI5IiwiZGVlcGFrIiwiQVNQLk5FVCBJZGVudGl0eSIsIjViNDE4ODE2LTI3ZjQtNGRlOC1iNmMyLTJlZTcxNjI3ZmJmYyIsIkFkbWluIiwiU3VwZXJBZG1pbiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMjciLCJhdWQiOiI4MjkzNjk0MjJmNzA0NTIzODUxZDk4NTU2YjZkNTQyYiIsImV4cCI6MTQ1OTQzMjk0MSwibmJmIjoxNDU5NDMxMTQxfQ.JgPGxt0Ok5baKx0YMXlO6D9kUYrCWM-Kma9b9iMW8tg
@@ -202,22 +202,22 @@ For Update requests the field `ClientAccountId` is used to check the correspondi
     + TradingEntityId (required, string) - identify specific trading entity
     + ClientAccountId (required, string) - code for client account to create
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data
             + ClientAccountID: ABCDEF.P (string)
         + Response (200 CreateResponse)
 
-+ Response 201 (application/json)
++ Response 201 (application/json; charset=utf-8)
     + Attributes 
         + Data
             + ClientAccountID: ABCDEF.P (string)
         + Response (201 UpdateResponse)
     
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 
@@ -241,7 +241,7 @@ User-defined list of codes used for classification purposes on Client Account pr
             + ClientTypeId
     + PropertyValue (optional, string, `H`) ... required if property specified 
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (array [ClientType List])
         + Pagination (Pagination)
@@ -249,10 +249,10 @@ User-defined list of codes used for classification purposes on Client Account pr
 
 
     
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 BadPropertyResponse)
   
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 
@@ -276,17 +276,17 @@ Country codes.
             + CountryId
     + PropertyValue (optional, string, `UK`)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (array [Country])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
     
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 BadPropertyResponse)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## Currency List [/ReferenceData/Global/Currency/{Property}/{PropertyValue}]
@@ -306,16 +306,16 @@ Currency codes.
             + CurrencyId
     + PropertyValue (optional, string, `UK`)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (array [Currency])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 BadPropertyResponse)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## UserAccount List  [/ReferenceData/Global/UserAccount/{Property}/{PropertyValue}]
@@ -341,16 +341,16 @@ ITAS User Account profiles.
             + UserAccountName
     + PropertyValue (optional, string, `JSMITH`)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (array [UserAccount])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 BadPropertyResponse)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 
@@ -383,16 +383,16 @@ Codes used to segregate business sectors within a trading company, and can be ap
     + PropertyValue (optional, string, `O`) ... required if property specified
 
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (array[Department List])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 BadPropertyResponse)
     
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## Department [/ReferenceData/{TradingEntityId}/NominalLedger/Department/{DepartmentId}]
@@ -414,16 +414,16 @@ Codes used to segregate business sectors within a trading company, and can be ap
     + TradingEntityId (required, string, `AB`) ...  specific trading entity
     + DepartmentId (required, string, `5100`) ...  property department id 
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (Department)
         + Response (200 SuccessResponse)
 
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## Expense List [/ReferenceData/{TradingEntityId}/NominalLedger/Expense/{Property}/{PropertyValue}]
@@ -451,16 +451,16 @@ Codes that are primarily used for accounting transaction analysis purposes.
             + Status 
     + PropertyValue (optional, string, `F`) 
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (array [Expense List])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## NominalAccount List [/ReferenceData/{TradingEntityId}/NominalLedger/NominalAccount/{Property}/{PropertyValue}]
@@ -491,14 +491,14 @@ Nominal (General) Ledger Account profile.
     + PropertyValue (optional, string, `AF`) ... required if property specified
 
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (array[NominalAccount])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
 
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## NominalAccount [/ReferenceData/{TradingEntityId}/NominalLedger/NominalAccount/{NominalAccountId}]
@@ -522,13 +522,13 @@ Nominal (General) Ledger Account profile.
     + NominalAccountId (required, string, `1234.5678`) 
 
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (NominalAccount)
         + Response (200 SuccessResponse)
 
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
     
 ### Update NominalAccount [PUT]
@@ -541,23 +541,23 @@ Nominal (General) Ledger Account profile.
 |PrivilegeLevel|nhr20_priv|`number`|1|||
 |EDICode|nhr20_altcode|`string`|30|Status|nhr20_status|`string`|1|||
 
-+ Request (application/json)
++ Request (application/json; charset=utf-8)
     + Header
 
             AccessToken:Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1bmlxdWVfbmFtZSI6ImRlZXBhayIsInN1YiI6ImRlZXBhayIsInJvbGUiOlsiNzk5YjhhNDEtYWI0ZS00MTBhLWI5MTktYzU3ZWFlMmFlMDI5IiwiZGVlcGFrIiwiQVNQLk5FVCBJZGVudGl0eSIsIjViNDE4ODE2LTI3ZjQtNGRlOC1iNmMyLTJlZTcxNjI3ZmJmYyIsIkFkbWluIiwiU3VwZXJBZG1pbiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMjciLCJhdWQiOiI4MjkzNjk0MjJmNzA0NTIzODUxZDk4NTU2YjZkNTQyYiIsImV4cCI6MTQ1OTQzMjk0MSwibmJmIjoxNDU5NDMxMTQxfQ.JgPGxt0Ok5baKx0YMXlO6D9kUYrCWM-Kma9b9iMW8tg
 
     + Attributes (NominalAccount)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data
             + NominalAccountId: 1234.5678 (string)
         + Response (201 UpdateResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## NominalCategory List [/ReferenceData/{TradingEntityId}/NominalLedger/NominalCategory/{Property}/{PropertyValue}]
@@ -582,16 +582,16 @@ User-defined categorisation codes that can be applied to departments and bank ac
     + PropertyValue (optional, string, `AF`) ... required if property specified
 
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (array[NominalCatagory])
         + Response (200 SuccessResponse)
 
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## Vat Rate List [/ReferenceData/{TradingEntityId}/NominalLedger/VATRate/{Property}/{PropertyValue}]
@@ -618,16 +618,16 @@ Codes and rates applied as part of any VAT/GST accounting practise.
             + Status
     + PropertyValue (optional, string, `AF`) 
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (array [VATRate])
         + Response (200 SuccessResponse)
 
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 BadPropertyResponse)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 
@@ -669,16 +669,16 @@ Commodity/Product codes, used to identify goods
             + Status (optional, string)
     + PropertyValue (optional, string, `O`) ... required if property specified.
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (array[Commodity])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
     
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 BadPropertyResponse)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## Contract Term List [/ReferenceData/{TradingEntityId}/Physicals/ContractTerm/{Property}/{PropertyValue}]
@@ -706,16 +706,16 @@ Contract Terms (aka Incoterms) usually setup to represent pre-defined, internati
             + Status (optional, string)
     + PropertyValue (optional, string, `O`)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes
         + Data (array[ContractTerm])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
     
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 BadPropertyResponse)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## PackingType List [/ReferenceData/{TradingEntityId}/Physicals/PackingType/{Property}/{PropertyValue}]
@@ -741,16 +741,16 @@ Codes used to describe the units of packing applied in physical contracts.
             + Status (optional, string)
     + PropertyValue (optional, string, `O`) ... required if property specified.
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (array[PackingType])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
     
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 BadPropertyResponse)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## PaymentTerm List [/ReferenceData/{TradingEntityId}/Physicals/PaymentTerm/{Property}/{PropertyValue}]
@@ -776,16 +776,16 @@ Codes used to describe terms of payment applied to physical contracts through to
             + Status (optional, string)
     + PropertyValue (optional, string, `O`) ... required if property specified.
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (array[PaymentTerm])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
     
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 BadPropertyResponse)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## Port List [/ReferenceData/{TradingEntityId}/Physicals/Port/{Property}/{PropertyValue}]
@@ -803,16 +803,16 @@ Codes used to identify physical port locations.
 + Request
     [AccessToken][]
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (array [Port List])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
     
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 BadPropertyResponse)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## Sample List [/ReferenceData/{TradingEntityId}/Physicals/Sample/{Property}/{PropertyValue}]
@@ -837,16 +837,16 @@ Codes used to identify specific product qualities.
             + SampleId (optional, string,) 
     + PropertyValue (optional, string, `abc123`) ... required if property specified.
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (array[Sample])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 BadPropertyResponse)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## ShippingStatus List [/ReferenceData/{TradingEntityId}/Physicals/ShippingStatus/{Property}/{PropertyValue}]
@@ -868,16 +868,16 @@ Codes used to classify the status in terms of movement, useful for reporting pur
             + ShippingStatusId (optional, string,) 
     + PropertyValue (optional, string, `OR`) ... required if property specified.
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (array[ShippingStatus])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 BadPropertyResponse)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## Terminal List [/ReferenceData/{TradingEntityId}/Physicals/Terminal/{Property}/{PropertyValue}]
@@ -901,16 +901,16 @@ Codes used to identify specific terminal location, useful for reporting purposes
             + TerminalId (optional, string) 
     + PropertyValue (optional, string, `O`) ... required if property specified.
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (array[Terminal])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 BadPropertyResponse)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## Vessel List [/ReferenceData/{TradingEntityId}/Physicals/Vessel/{Property}/{PropertyValue}]
@@ -926,16 +926,16 @@ List of Vessel names that can be applied as part of any physical logistics strat
 + Request
     [AccessToken][]
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (array [Vessel List])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
     
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 BadPropertyResponse)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## Weight List [/ReferenceData/{TradingEntityId}/Physicals/Weight/{Property}/{PropertyValue}]
@@ -964,16 +964,16 @@ Codes used to describe the units of measurement applied in physical contracts.
             + Status (optional, string)
     + PropertyValue (optional, string, `abc123`) ... required if property specified.
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (array[Weight])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
     
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 BadPropertyResponse)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 
@@ -1007,15 +1007,15 @@ Charter profile – restricted by WIPAccountType of `C`.
     + TradingEntityId (required, string, `AB`) 
     + CharterId (required, string, `CHART01.000`)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (Charter)
         + Response (200 SuccessResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 
@@ -1052,17 +1052,17 @@ List of charter profiles – restricted by WIPAccountType of `C`.
             + Status (optional, string)
     + PropertyValue (optional, string, `abc`) ... required if property specified.
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes (object)
         + Data (array [Charter List])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
 
     
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 BadPropertyResponse)
     
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 
@@ -1093,15 +1093,15 @@ Stock Account profile - restricted by WIPAccountType of `S`.
     + TradingEntityId (required, string, `AB`) 
     + StockUnitId (required, string, `5100.MEP`)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (StockUnit)
         + Response (200 SuccessResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 
@@ -1137,16 +1137,16 @@ Stock Account profile – restricted by WIPAccountType of `S`.
             + Status (optional, string)
     + PropertyValue (optional, string, `abc`) ... required if property specified.
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes
         + Data (array [StockUnitList])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
     
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 BadPropertyResponse)
     
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 
@@ -1175,15 +1175,15 @@ Charter profile
     + TradingEntityId (required, string, `AB`) 
     + WipAccountId (required, string, `5100.MEP`)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (WIPAccount)
         + Response (200 SuccessResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 
@@ -1218,16 +1218,16 @@ List of charter profiles.
             + Status (optional, string)
     + PropertyValue (optional, string, `abc`) ... required if property specified.
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (array[WIPAccount List])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
     
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 BadPropertyResponse)
     
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 
@@ -1280,16 +1280,16 @@ Provides access to full accounting ledger by Document Reference.
     + TradingEntityId (required, string, `AB`) 
     + DocumentReference (required, string, `P10000.000`)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (array [PostedTransaction])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 
@@ -1333,16 +1333,16 @@ Provides access to financial transaction details yet to be posted to the ledgers
     + TradingEntityId (required, string, `AB`) 
     + DocumentReference (required, string, `CN1600001`)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (array [UnPostedTransaction])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 
@@ -1360,7 +1360,7 @@ Document summary information including properties specific to integration requir
 |PostedDate|xtx01_postdatetime|`datetime`||||
 |DocumentDate|xtx01_txxddate|`datetime`||||
 
-+ Request (application/json)
++ Request (application/json; charset=utf-8)
     + Header
 
             AccessToken: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1bmlxdWVfbmFtZSI6ImRlZXBhayIsInN1YiI6ImRlZXBhayIsInJvbGUiOlsiNzk5YjhhNDEtYWI0ZS00MTBhLWI5MTktYzU3ZWFlMmFlMDI5IiwiZGVlcGFrIiwiQVNQLk5FVCBJZGVudGl0eSIsIjViNDE4ODE2LTI3ZjQtNGRlOC1iNmMyLTJlZTcxNjI3ZmJmYyIsIkFkbWluIiwiU3VwZXJBZG1pbiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMjciLCJhdWQiOiI4MjkzNjk0MjJmNzA0NTIzODUxZDk4NTU2YjZkNTQyYiIsImV4cCI6MTQ1OTQzMjk0MSwibmJmIjoxNDU5NDMxMTQxfQ.JgPGxt0Ok5baKx0YMXlO6D9kUYrCWM-Kma9b9iMW8tg
@@ -1371,16 +1371,16 @@ Document summary information including properties specific to integration requir
     + TradingEntityId (required, string, `AB`) 
     + DocumentReference (required, string, `CN1600001`)
 
-+ Response 201 (application/json)
++ Response 201 (application/json; charset=utf-8)
     + Attributes 
         + Data
             + DocumentReference: CN1600001 (string)
         + Response (201 UpdateResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## Transaction Header List [/Accounting/{TradingEntityId}/Transaction/TransactionHeader/{Property}/{PropertyValue}]
@@ -1407,16 +1407,16 @@ Document summary information including properties specific to integration requir
             + EDICode (optional, string)
     + PropertyValue (optional, string, `abc`)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (array [TransactionHeader List])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 
@@ -1456,15 +1456,15 @@ Principle Physical Contract (agreement) details
     + TradingEntityId (required, string, `AB`) 
     + ContractId (required, string, `P40000.000`)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (PhysicalTrade)
         + Response (200 SuccessResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## Physical Trade List [/Contract/{TradingEntityId}/Physical/PhysicalTrade/{Property}/{PropertyValue}]
@@ -1510,16 +1510,16 @@ List of Principle Physical Contracts (agreements)
             + ContractApproved (optional, string)
     + PropertyValue (optional, string, `P40000.000`)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (array [PhysicalTrade List])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## Physical Trade Commission [/Contract/{TradingEntityId}/Physical/PhysicalTradeCommission/{ContractId}]
@@ -1540,15 +1540,15 @@ Broker commissions held against Physical Contracts.
     + TradingEntityId (required, string, `AB`) 
     + ContractId (required, string, `P40000.000`)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (PhysicalTradeCommission)
         + Response (200 SuccessResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## Physical Trade Commissions List [/Contract/{TradingEntityId}/Physical/PhysicalTradeCommission/{Property}/{PropertyValue}]
@@ -1573,16 +1573,16 @@ List of Broker commissions held against Physical Contracts.
             + AgentAccountCode (optional, string)
     + PropertyValue (optional, string, `abc`)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (array [PhysicalTradeCommission List])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## Physical Trade Shipments List [/Contract/{TradingEntityId}/Physical/PhysicalTradeShipment/{Property}/{PropertyValue}]
@@ -1609,16 +1609,16 @@ List of Logistics information for Physical Contracts.
             + VesselReference (optional, string)
     + PropertyValue (optional, string, `abc`)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (array [PhysicalTradeShipment List])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 # Group Finance/Cash
@@ -1644,7 +1644,7 @@ None.
     + TradingEntityId (required, string, `AB`) 
     + DocumentReference (required, string, `abc123`)
 
-+ Request (application/json)
++ Request (application/json; charset=utf-8)
     + Header
 
             AccessToken: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1bmlxdWVfbmFtZSI6ImRlZXBhayIsInN1YiI6ImRlZXBhayIsInJvbGUiOlsiNzk5YjhhNDEtYWI0ZS00MTBhLWI5MTktYzU3ZWFlMmFlMDI5IiwiZGVlcGFrIiwiQVNQLk5FVCBJZGVudGl0eSIsIjViNDE4ODE2LTI3ZjQtNGRlOC1iNmMyLTJlZTcxNjI3ZmJmYyIsIkFkbWluIiwiU3VwZXJBZG1pbiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMjciLCJhdWQiOiI4MjkzNjk0MjJmNzA0NTIzODUxZDk4NTU2YjZkNTQyYiIsImV4cCI6MTQ1OTQzMjk0MSwibmJmIjoxNDU5NDMxMTQxfQ.JgPGxt0Ok5baKx0YMXlO6D9kUYrCWM-Kma9b9iMW8tg
@@ -1657,16 +1657,16 @@ None.
 
 
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data
             + DocumentReference: abc123 (string)
         + Response (200 AuthoriseResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## PayableManual [/Finance/{TradingEntityId}/Cash/PayableManual]
@@ -1682,22 +1682,22 @@ Allows generic cash payments to be created between multiple accounts
 + Parameters
     + TradingEntityId (required, string, `AB`) 
 
-+ Request (application/json)
++ Request (application/json; charset=utf-8)
     + Header
 
             AccessToken: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1bmlxdWVfbmFtZSI6ImRlZXBhayIsInN1YiI6ImRlZXBhayIsInJvbGUiOlsiNzk5YjhhNDEtYWI0ZS00MTBhLWI5MTktYzU3ZWFlMmFlMDI5IiwiZGVlcGFrIiwiQVNQLk5FVCBJZGVudGl0eSIsIjViNDE4ODE2LTI3ZjQtNGRlOC1iNmMyLTJlZTcxNjI3ZmJmYyIsIkFkbWluIiwiU3VwZXJBZG1pbiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMjciLCJhdWQiOiI4MjkzNjk0MjJmNzA0NTIzODUxZDk4NTU2YjZkNTQyYiIsImV4cCI6MTQ1OTQzMjk0MSwibmJmIjoxNDU5NDMxMTQxfQ.JgPGxt0Ok5baKx0YMXlO6D9kUYrCWM-Kma9b9iMW8tg
 
     + Attributes (PayableReceivableManual)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (CashDocRefResponse)
         + Response (200 CreateResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## PayableOnAccount [/Finance/{TradingEntityId}/Cash/PayableOnAccount]
@@ -1716,22 +1716,22 @@ Allows cash payments to be created on account of existing (posted) accounting do
 + Parameters
     + TradingEntityId (required, string, `AB`) 
 
-+ Request (application/json)
++ Request (application/json; charset=utf-8)
     + Header
 
             AccessToken: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1bmlxdWVfbmFtZSI6ImRlZXBhayIsInN1YiI6ImRlZXBhayIsInJvbGUiOlsiNzk5YjhhNDEtYWI0ZS00MTBhLWI5MTktYzU3ZWFlMmFlMDI5IiwiZGVlcGFrIiwiQVNQLk5FVCBJZGVudGl0eSIsIjViNDE4ODE2LTI3ZjQtNGRlOC1iNmMyLTJlZTcxNjI3ZmJmYyIsIkFkbWluIiwiU3VwZXJBZG1pbiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMjciLCJhdWQiOiI4MjkzNjk0MjJmNzA0NTIzODUxZDk4NTU2YjZkNTQyYiIsImV4cCI6MTQ1OTQzMjk0MSwibmJmIjoxNDU5NDMxMTQxfQ.JgPGxt0Ok5baKx0YMXlO6D9kUYrCWM-Kma9b9iMW8tg
 
     + Attributes (PayableReceivableOnAccount)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (CashDocRefResponse)
         + Response (200 CreateResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 
@@ -1748,22 +1748,22 @@ Allows generic cash receipts to be created between multiple accounts
 + Parameters
     + TradingEntityId (required, string, `AB`) 
 
-+ Request (application/json)
++ Request (application/json; charset=utf-8)
     + Header
 
             AccessToken: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1bmlxdWVfbmFtZSI6ImRlZXBhayIsInN1YiI6ImRlZXBhayIsInJvbGUiOlsiNzk5YjhhNDEtYWI0ZS00MTBhLWI5MTktYzU3ZWFlMmFlMDI5IiwiZGVlcGFrIiwiQVNQLk5FVCBJZGVudGl0eSIsIjViNDE4ODE2LTI3ZjQtNGRlOC1iNmMyLTJlZTcxNjI3ZmJmYyIsIkFkbWluIiwiU3VwZXJBZG1pbiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMjciLCJhdWQiOiI4MjkzNjk0MjJmNzA0NTIzODUxZDk4NTU2YjZkNTQyYiIsImV4cCI6MTQ1OTQzMjk0MSwibmJmIjoxNDU5NDMxMTQxfQ.JgPGxt0Ok5baKx0YMXlO6D9kUYrCWM-Kma9b9iMW8tg
 
     + Attributes (PayableReceivableManual)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (CashDocRefResponse)
         + Response (200 CreateResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 
@@ -1783,22 +1783,22 @@ Allows cash receipts to be created on account of existing (posted) accounting do
 + Parameters
     + TradingEntityId (required, string, `AB`) 
 
-+ Request (application/json)
++ Request (application/json; charset=utf-8)
     + Header
 
             AccessToken: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1bmlxdWVfbmFtZSI6ImRlZXBhayIsInN1YiI6ImRlZXBhayIsInJvbGUiOlsiNzk5YjhhNDEtYWI0ZS00MTBhLWI5MTktYzU3ZWFlMmFlMDI5IiwiZGVlcGFrIiwiQVNQLk5FVCBJZGVudGl0eSIsIjViNDE4ODE2LTI3ZjQtNGRlOC1iNmMyLTJlZTcxNjI3ZmJmYyIsIkFkbWluIiwiU3VwZXJBZG1pbiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMjciLCJhdWQiOiI4MjkzNjk0MjJmNzA0NTIzODUxZDk4NTU2YjZkNTQyYiIsImV4cCI6MTQ1OTQzMjk0MSwibmJmIjoxNDU5NDMxMTQxfQ.JgPGxt0Ok5baKx0YMXlO6D9kUYrCWM-Kma9b9iMW8tg
 
     + Attributes (PayableReceivableOnAccount)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (CashDocRefResponse)
         + Response (200 CreateResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 
@@ -1826,15 +1826,15 @@ Orders (CallOffs) specifically representing incoming goods.
     + TradingEntityId (required, string, `AB`) 
     + ReleaseId (required, number, `123`)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (DeliveryInOrder)
         + Response (200 SuccessResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## DeliveryOutOrder [/Inventory/{TradingEntityId}/Physicals/OrderScheduling/DeliveryOutOrder/{ReleaseId}]
@@ -1856,12 +1856,12 @@ Orders (CallOffs) specifically representing outgoing goods.
     + TradingEntityId (required, string, `AB`) 
     + ReleaseId (required, number, `123`)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (DeliveryOutOrder)
         + Response (200 SuccessResponse)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## ExpedCallOff [/Inventory/{TradingEntityId}/Physicals/OrderScheduling/ExpedCallOff/{ReleaseId}]
@@ -1910,12 +1910,12 @@ Orders (CallOffs) generated through EXPED
     + TradingEntityId (required, string, `AB`) 
     + ReleaseId (required, string, `abc123`)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (ExpedCallOff)
         + Response (200 SuccessResponse)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## ExpedCallOff List [/Inventory/{TradingEntityId}/Physicals/OrderScheduling/ExpedCallOff/{Property}/{PropertyValue}]
@@ -1968,16 +1968,16 @@ Orders (CallOffs) generated through EXPED
             + TerminaId
     + PropertyValue (optional, string, `abc123`) ... required if property specified.
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (array [ExpedCallOff List])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 BadPropertyResponse)
     
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## StockToStockOrder [/Inventory/{TradingEntityId}/Physicals/OrderScheduling/StockToStockOrder/{ReleaseId}]
@@ -1999,21 +1999,21 @@ Orders specifically representing movements of goods between Stock Units (aka Man
     + TradingEntityId (required, string, `AB`) 
     + ReleaseId (required, number, `123`)
 
-+ Request (application/json)
++ Request (application/json; charset=utf-8)
     + Header
 
             AccessToken: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1bmlxdWVfbmFtZSI6ImRlZXBhayIsInN1YiI6ImRlZXBhayIsInJvbGUiOlsiNzk5YjhhNDEtYWI0ZS00MTBhLWI5MTktYzU3ZWFlMmFlMDI5IiwiZGVlcGFrIiwiQVNQLk5FVCBJZGVudGl0eSIsIjViNDE4ODE2LTI3ZjQtNGRlOC1iNmMyLTJlZTcxNjI3ZmJmYyIsIkFkbWluIiwiU3VwZXJBZG1pbiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMjciLCJhdWQiOiI4MjkzNjk0MjJmNzA0NTIzODUxZDk4NTU2YjZkNTQyYiIsImV4cCI6MTQ1OTQzMjk0MSwibmJmIjoxNDU5NDMxMTQxfQ.JgPGxt0Ok5baKx0YMXlO6D9kUYrCWM-Kma9b9iMW8tg
 
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (StockToStockOrder)
         + Response (200 SuccessResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 
@@ -2040,15 +2040,15 @@ Batch record information by Stock Unit.
     + TradingEntityId (required, string, `AB`) 
     + StockBatchId (required, string, `abc123`)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (StockBatch)
         + Response (200 SuccessResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
     
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## StockBatch List [/Inventory/{TradingEntityId}/Physicals/StockManagement/StockBatch/{Property}/{PropertyValue}]
@@ -2074,16 +2074,16 @@ Batch record information by Stock Unit.
             + StockUnitCode
     + PropertyValue (optional, string, `abc123`) ... required if property specified.
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (StockBatch List)
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 BadPropertyResponse)
     
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 
@@ -2105,7 +2105,7 @@ Trigger call to complete an order (e.g. create stock journals etc)
 <br />
 None.
 
-+ Request (application/json)
++ Request (application/json; charset=utf-8)
     + Header
 
             AccessToken: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1bmlxdWVfbmFtZSI6ImRlZXBhayIsInN1YiI6ImRlZXBhayIsInJvbGUiOlsiNzk5YjhhNDEtYWI0ZS00MTBhLWI5MTktYzU3ZWFlMmFlMDI5IiwiZGVlcGFrIiwiQVNQLk5FVCBJZGVudGl0eSIsIjViNDE4ODE2LTI3ZjQtNGRlOC1iNmMyLTJlZTcxNjI3ZmJmYyIsIkFkbWluIiwiU3VwZXJBZG1pbiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMjciLCJhdWQiOiI4MjkzNjk0MjJmNzA0NTIzODUxZDk4NTU2YjZkNTQyYiIsImV4cCI6MTQ1OTQzMjk0MSwibmJmIjoxNDU5NDMxMTQxfQ.JgPGxt0Ok5baKx0YMXlO6D9kUYrCWM-Kma9b9iMW8tg
@@ -2120,16 +2120,16 @@ None.
     + TradingEntityId (required, string, `AB`) 
     + ReleaseId (required, number, `123`)
 
-+ Response 201 (application/json)
++ Response 201 (application/json; charset=utf-8)
     + Attributes 
         + Data
             + ReleaseId: 123 (number)
         + Response (201 UpdateResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
     
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ## StockLoading [/Inventory/{TradingEntityId}/Physicals/OrderProcessing/StockLoading/{ReleaseId}]
@@ -2149,15 +2149,15 @@ Information specific to the source of the goods generated during any movement (D
     + TradingEntityId (required, string, `AB`) 
     + ReleaseId (required, number, `123`)
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (array [StockLoading])
         + Response (200 SuccessResponse)
     
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
     
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ### Create/Update StockLoading [PUT]
@@ -2172,24 +2172,24 @@ Information specific to the source of the goods generated during any movement (D
     + TradingEntityId (required, string, `AB`) 
     + ReleaseId (required, number, `123`)
 
-+ Request (application/json)
++ Request (application/json; charset=utf-8)
     + Header
 
             AccessToken: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1bmlxdWVfbmFtZSI6ImRlZXBhayIsInN1YiI6ImRlZXBhayIsInJvbGUiOlsiNzk5YjhhNDEtYWI0ZS00MTBhLWI5MTktYzU3ZWFlMmFlMDI5IiwiZGVlcGFrIiwiQVNQLk5FVCBJZGVudGl0eSIsIjViNDE4ODE2LTI3ZjQtNGRlOC1iNmMyLTJlZTcxNjI3ZmJmYyIsIkFkbWluIiwiU3VwZXJBZG1pbiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMjciLCJhdWQiOiI4MjkzNjk0MjJmNzA0NTIzODUxZDk4NTU2YjZkNTQyYiIsImV4cCI6MTQ1OTQzMjk0MSwibmJmIjoxNDU5NDMxMTQxfQ.JgPGxt0Ok5baKx0YMXlO6D9kUYrCWM-Kma9b9iMW8tg
 
     + Attributes (array [StockLoadingFlat])
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Attributes 
         + Data
             + ReleaseId: 123 (number)
         + Response (200 CreateResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 
@@ -2225,20 +2225,20 @@ Information relating to the processing of the Order.
     + TradingEntityId (required, string, `AB`) 
     + ReleaseId (required, number, `123`)
 
-+ Request (application/json)
++ Request (application/json; charset=utf-8)
     + Header
 
             AccessToken: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1bmlxdWVfbmFtZSI6ImRlZXBhayIsInN1YiI6ImRlZXBhayIsInJvbGUiOlsiNzk5YjhhNDEtYWI0ZS00MTBhLWI5MTktYzU3ZWFlMmFlMDI5IiwiZGVlcGFrIiwiQVNQLk5FVCBJZGVudGl0eSIsIjViNDE4ODE2LTI3ZjQtNGRlOC1iNmMyLTJlZTcxNjI3ZmJmYyIsIkFkbWluIiwiU3VwZXJBZG1pbiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMjciLCJhdWQiOiI4MjkzNjk0MjJmNzA0NTIzODUxZDk4NTU2YjZkNTQyYiIsImV4cCI6MTQ1OTQzMjk0MSwibmJmIjoxNDU5NDMxMTQxfQ.JgPGxt0Ok5baKx0YMXlO6D9kUYrCWM-Kma9b9iMW8tg
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
     + Attributes 
         + Data (StockMovement)
         + Response (200 SuccessResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 ### Update StockMovement [PUT]
@@ -2272,23 +2272,23 @@ Information relating to the processing of the Order.
     + TradingEntityId (required, string, `AB`) 
     + ReleaseId (required, number, `123`)
 
-+ Request (application/json)
++ Request (application/json; charset=utf-8)
     + Header
 
             AccessToken: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1bmlxdWVfbmFtZSI6ImRlZXBhayIsInN1YiI6ImRlZXBhayIsInJvbGUiOlsiNzk5YjhhNDEtYWI0ZS00MTBhLWI5MTktYzU3ZWFlMmFlMDI5IiwiZGVlcGFrIiwiQVNQLk5FVCBJZGVudGl0eSIsIjViNDE4ODE2LTI3ZjQtNGRlOC1iNmMyLTJlZTcxNjI3ZmJmYyIsIkFkbWluIiwiU3VwZXJBZG1pbiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMjciLCJhdWQiOiI4MjkzNjk0MjJmNzA0NTIzODUxZDk4NTU2YjZkNTQyYiIsImV4cCI6MTQ1OTQzMjk0MSwibmJmIjoxNDU5NDMxMTQxfQ.JgPGxt0Ok5baKx0YMXlO6D9kUYrCWM-Kma9b9iMW8tg
 
    + Attributes (StockMovement Flat)
 
-+ Response 201 (application/json)
++ Response 201 (application/json; charset=utf-8)
     + Attributes  
         + Data 
             + ReleaseId: 123 (number)
         + Response (201 UpdateResponse)
 
-+ Response 400 (application/json)
++ Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
-+ Response 404 (application/json)
++ Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
 
 
@@ -2334,7 +2334,7 @@ The account header object is derived from multiple locations of the database dep
 |EDICode|cna50_c2cacc|`string`|50|||
 |Status|cna50_status|`string`|1|||
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
 + Attributes (AccountHeader)
 
 ## AccountPostingDetails [/AccountPostingDetails]
@@ -2351,7 +2351,7 @@ The account header object is derived from multiple locations of the database dep
 |AmountInDocumentCurrency|dhlxx_amount|`decimal`||required|can contain negative values|
 
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
 + Attributes (AccountPostingDetails)
 
 ## Address [/Address]
@@ -2371,7 +2371,7 @@ A multipurpose object used by several endpoints.
 |PhoneNumber|chr20_phoneno|`string`|40|||
 |FaxNumber|chr20_faxno|`string`|40|||
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
 + Attributes (ContactDetails)
 
 ## AddressCountry [/AddressCountry]
@@ -2384,7 +2384,7 @@ A multipurpose object used by several endpoints.
 |CountryId|boec_code|`string`|3|||
 |CountryDescription|boec_descr|`string`|50|||
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
 + Attributes (Country)
 
 ## DocumentDetails [/DocumentDetails]
@@ -2402,7 +2402,7 @@ A multipurpose object used by several endpoints.
 |EDICode|xtx01_axdocref|`string`|25|||
 
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
 + Attributes (DocumentDetails)
 
 ## OnAccountDetails [/OnAccountDetails]
@@ -2432,7 +2432,7 @@ The Transaction key is a five part key made up of the following values seperate 
 ||txx_posttime|`number`|0||required|
 
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=utf-8)
 + Attributes (OnAccountDetails)
 
 
