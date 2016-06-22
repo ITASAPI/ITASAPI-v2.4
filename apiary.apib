@@ -70,8 +70,8 @@ Client Ledger Account profile.
     [AccessToken][]
     
 + Parameters
-    + TradingEntityId (required, string, `JT`) ... identify specific trading entity
-    + Property (optional, enum[string]) ... identify property name to filter by 
+    + TradingEntityId (required, string, `JT`) --- identify specific trading entity
+    + Property (optional, enum[string]) --- identify property name to filter by 
        + Members
             + Status
             + CanBeBuyer
@@ -81,7 +81,7 @@ Client Ledger Account profile.
             + CanBeDerivativeClient 
             + CanBeDerivativeBroker 
             + EDICode
-    + PropertyValue (optional, string, `O`) ... required if property specified
+    + PropertyValue (optional, string, `O`) --- required if property specified
 
 + Response 200 (application/json; charset=utf-8)
     + Attributes (object)
@@ -89,15 +89,24 @@ Client Ledger Account profile.
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
 
+
 + Request
     [AccessToken][]
 
 + Parameters
-    + TradingEntityId (required, string, `XX`) 
-    + ClientAccountId (required, string, `P10000.000) 
+    + TradingEntityId (required, string, `XX`) --- incorrect TEID produces 404
 
 + Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)    
+
+
++ Request
+    [AccessToken][]
+
++ Parameters
+    + TradingEntityId (required, string, `JT`) - identify specific trading entity
+    + Property (optional, string, Foobar) - incorrect filter prodcues 400 
+    + PropertyValue (optional, string, `foobar2`) - required if property specified
 
 
 + Response 400 (application/json; charset=utf-8)
