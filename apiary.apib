@@ -2226,7 +2226,7 @@ Information relating to the processing of the Order.
 
 |property|description|type|max length|notes|constraint|
 |--------|-----------|----|----------|-----|----------|
-|ReleaseId|phys09_releasenr|`number`||||
+|ReleaseId|phys09_releasenr|`number`||`Required`||
 |OrderAcknowledged|phys09_sent|`string`|1|||
 |NetLoadedWeight|phys09_loaded|`number`||||
 |NetPumpedWeight|phys09_pumped|`number`||||
@@ -2272,7 +2272,7 @@ Information relating to the processing of the Order.
 
 |property|description|type|max length|notes|constraint|
 |--------|-----------|----|----------|-----|----------|
-|ReleaseId|phys09_releasenr|`number`||||
+|ReleaseId|phys09_releasenr|`number`||`Required`||
 |OrderAcknowledged|phys09_sent|`string`|1|||
 |NetLoadedWeight|phys09_loaded|`number`||||
 |NetPumpedWeight|phys09_pumped|`number`||||
@@ -3018,7 +3018,7 @@ The Transaction key is a five part key made up of the following values seperate 
 + Weight: 100 (required, number)
 
 ## StockMovement (object)
-+ ReleaseId: 100 (number)
++ ReleaseId: 100 (required, number)
 + OrderAcknowledged: N (string)
 + NetLoadedWeight: 10.00 (number)
 + NetPumpedWeight: 10.00 (number)
