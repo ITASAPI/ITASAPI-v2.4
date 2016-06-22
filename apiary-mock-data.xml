@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <MockRequests>
 
-  <Request group="Client Reference Data" list="ClientAccount List" endpoint="List ClientAccounts" method="GET" expect="200">
+  <Request id="001" group="Client Reference Data" list="ClientAccount List" endpoint="List ClientAccounts" method="GET" expect="200">
     <PathVar name="TradingEntityId" value="JT" />
   </Request>
 
-  <Request group="Client Reference Data" list="ClientAccount List" endpoint="List ClientAccounts" method="GET" expect="200">
+  <Request id="002" group="Client Reference Data" list="ClientAccount List" endpoint="List ClientAccounts" method="GET" expect="200">
     <PathVar name="TradingEntityId" value="JT" />
-    <PathVar name="TradingEntityId" value="Status" />
-    <PathVar name="TradingEntityId" value="O" />
+    <PathVar name="Property" value="Status" />
+    <PathVar name="PropertyValue" value="O" />
   </Request>
 
-  <Request group="Client Reference Data" list="ClientAccount List" endpoint="List ClientAccounts" method="GET" expect="400">
+  <Request id="003" group="Client Reference Data" list="ClientAccount List" endpoint="List ClientAccounts" method="GET" expect="400">
     <PathVar name="TradingEntityId" value="JT" />
-    <PathVar name="TradingEntityId" value="Statusxyz" />
-    <PathVar name="TradingEntityId" value="O" />
+    <PathVar name="Property" value="Statusxyz" />
+    <PathVar name="PropertyValue" value="O" />
   </Request>
 
-  <Request group="Client Reference Data" list="ClientAccount List" endpoint="List ClientAccounts" method="GET" expect="400">
+  <Request id="004" group="Client Reference Data" list="ClientAccount List" endpoint="List ClientAccounts" method="GET" expect="400">
     <PathVar name="TradingEntityId" value="JT" />
-    <PathVar name="TradingEntityId" value="Status" />
-    <PathVar name="TradingEntityId" value="O12345" />
+    <PathVar name="Property" value="Status" />
+    <PathVar name="PropertyValue" value="O12345" />
   </Request>
 
-  <Request group="Client Reference Data" list="ClientAccount List" endpoint="List ClientAccounts" method="GET" expect="404">
+  <Request id="004" group="Client Reference Data" list="ClientAccount List" endpoint="List ClientAccounts" method="GET" expect="404">
     <PathVar name="TradingEntityId" value="ZZ" />
-    <PathVar name="TradingEntityId" value="Status" />
-    <PathVar name="TradingEntityId" value="O12345" />
+    <PathVar name="Property" value="Status" />
+    <PathVar name="PropertyValue" value="O12345" />
   </Request>
 
 </MockRequests>
