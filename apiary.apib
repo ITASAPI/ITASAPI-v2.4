@@ -144,13 +144,6 @@ Client Ledger Account profile.
     + Attributes 
         + Data (ClientAccount)
         + Response (200 SuccessResponse)
-
-+ Request
-    [AccessToken][]
-    
-+ Parameters
-    + TradingEntityId (required, string, `XX`) - incorrect TEID produces 404
-    + ClientAccountId (required, string, `NEWACC42.P`) 
     
 + Response 404 (application/json; charset=utf-8)
     + Attributes (404 Response)
@@ -1303,20 +1296,11 @@ Provides access to full accounting ledger by Document Reference.
     + TradingEntityId (required, string, `JT`) 
     + DocumentReference (required, string, `CP1500047`)
 
-+ Response 404 (application/json; charset=utf-8)
-    + Attributes (404 Response)
-
-
-+ Request
-    [AccessToken][]
-    
-+ Parameters
-    + TradingEntityId (required, string, `Blah`) 
-    + DocumentReference (required, string, ``)
-
 + Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
 
++ Response 404 (application/json; charset=utf-8)
+    + Attributes (404 Response)
 
 
 
